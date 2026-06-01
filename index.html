@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Points de Félix</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="summary" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Suivi des 17 jours restants</p>
+          <h1 id="page-title">Points de Félix</h1>
+        </div>
+        <div class="reward" id="reward-status" aria-live="polite"></div>
+      </section>
+
+      <section class="score-grid" aria-label="Résumé des points">
+        <article class="score-card primary">
+          <span>Points restants</span>
+          <strong id="points-left">20</strong>
+          <div class="meter" aria-hidden="true">
+            <div id="points-meter"></div>
+          </div>
+        </article>
+        <article class="score-card">
+          <span>Points de départ</span>
+          <strong>20</strong>
+        </article>
+        <article class="score-card">
+          <span>Périodes restantes</span>
+          <strong>68</strong>
+        </article>
+        <article class="score-card">
+          <span>Pertes notées</span>
+          <strong id="loss-count">0</strong>
+        </article>
+      </section>
+
+      <section class="workspace read-only">
+        <section class="panel history-panel" aria-labelledby="history-title">
+          <div class="panel-header compact">
+            <div>
+              <h2 id="history-title">Historique</h2>
+              <p id="history-empty">Aucune perte de point pour le moment.</p>
+            </div>
+            <p class="updated-at" id="updated-at"></p>
+          </div>
+          <ol class="history-list" id="history-list"></ol>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
