@@ -1,5 +1,7 @@
 const pointsLeftEl = document.querySelector("#points-left");
+const pointsRingEl = document.querySelector("#points-ring");
 const pointsMeterEl = document.querySelector("#points-meter");
+const meterPercentEl = document.querySelector("#meter-percent");
 const lossCountEl = document.querySelector("#loss-count");
 const rewardStatusEl = document.querySelector("#reward-status");
 const historyListEl = document.querySelector("#history-list");
@@ -32,10 +34,12 @@ function render(data) {
   const percentLeft = (pointsLeft / startingPoints) * 100;
 
   pointsLeftEl.textContent = pointsLeft;
+  pointsRingEl.style.setProperty("--progress", `${percentLeft}%`);
   pointsMeterEl.style.width = `${percentLeft}%`;
+  meterPercentEl.textContent = `${Math.round(percentLeft)}%`;
   lossCountEl.textContent = losses.length;
-  document.querySelector(".score-card:nth-child(2) strong").textContent = startingPoints;
-  document.querySelector(".score-card:nth-child(3) strong").textContent = totalPeriods;
+  document.querySelector(".score-card:nth-child(1) strong").textContent = startingPoints;
+  document.querySelector(".score-card:nth-child(2) strong").textContent = totalPeriods;
   historyEmptyEl.hidden = losses.length > 0;
   updatedAtEl.textContent = data.lastUpdated
     ? `Mis à jour le ${formatDate(data.lastUpdated)}`

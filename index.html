@@ -8,22 +8,27 @@
   </head>
   <body>
     <main class="app-shell">
-      <section class="summary" aria-labelledby="page-title">
-        <div>
-          <p class="eyebrow">Suivi des 17 jours restants</p>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Défi de fin d'année</p>
           <h1 id="page-title">Points de Félix</h1>
+          <p class="hero-text">Un point perdu par retard ou message de l'école.</p>
         </div>
-        <div class="reward" id="reward-status" aria-live="polite"></div>
+
+        <div class="points-display" aria-label="Points restants">
+          <div class="points-ring" id="points-ring">
+            <div class="points-core">
+              <span>Il reste</span>
+              <strong id="points-left">20</strong>
+              <small>points</small>
+            </div>
+          </div>
+        </div>
       </section>
 
+      <div class="reward" id="reward-status" aria-live="polite"></div>
+
       <section class="score-grid" aria-label="Résumé des points">
-        <article class="score-card primary">
-          <span>Points restants</span>
-          <strong id="points-left">20</strong>
-          <div class="meter" aria-hidden="true">
-            <div id="points-meter"></div>
-          </div>
-        </article>
         <article class="score-card">
           <span>Points de départ</span>
           <strong>20</strong>
@@ -37,6 +42,16 @@
           <strong id="loss-count">0</strong>
         </article>
       </section>
+
+      <div class="meter-card" aria-hidden="true">
+        <div class="meter-labels">
+          <span>Progression</span>
+          <span id="meter-percent">100%</span>
+        </div>
+        <div class="meter">
+          <div id="points-meter"></div>
+        </div>
+      </div>
 
       <section class="workspace read-only">
         <section class="panel history-panel" aria-labelledby="history-title">
