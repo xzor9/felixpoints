@@ -1,19 +1,20 @@
 :root {
-  color-scheme: light;
-  --bg: #f5f7f2;
-  --ink: #1f2528;
-  --muted: #667078;
-  --line: #dfe5df;
-  --panel: #fffefa;
-  --green: #1f8a5f;
-  --green-dark: #126142;
-  --green-soft: #dff2e7;
-  --blue: #285c8d;
-  --blue-soft: #e1ecf6;
-  --yellow: #f2c84b;
-  --red: #b44d42;
-  --red-soft: #f6dfdb;
-  --shadow: 0 18px 44px rgba(34, 42, 37, 0.13);
+  color-scheme: dark;
+  --bg: #101418;
+  --ink: #f2f7f5;
+  --muted: #9aa8ad;
+  --line: rgba(255, 255, 255, 0.12);
+  --panel: #171d22;
+  --panel-strong: #1d252b;
+  --green: #42d98f;
+  --green-dark: #b5ffd7;
+  --green-soft: rgba(66, 217, 143, 0.14);
+  --blue: #8bc5ff;
+  --blue-soft: rgba(139, 197, 255, 0.14);
+  --yellow: #f5d76b;
+  --red: #ff7768;
+  --red-soft: rgba(255, 119, 104, 0.16);
+  --shadow: 0 18px 44px rgba(0, 0, 0, 0.34);
 }
 
 * {
@@ -24,7 +25,8 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    linear-gradient(180deg, #eaf2ef 0, #f8f6ee 360px, var(--bg) 100%);
+    radial-gradient(circle at 50% -120px, rgba(66, 217, 143, 0.24), transparent 360px),
+    linear-gradient(180deg, #151c21 0, var(--bg) 420px, #0c0f12 100%);
   color: var(--ink);
   font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -102,15 +104,15 @@ h2 {
   display: grid;
   place-items: center;
   background:
-    conic-gradient(var(--green) var(--progress), #d9ded8 0),
-    #d9ded8;
+    conic-gradient(var(--green) var(--progress), #293238 0),
+    #293238;
   box-shadow: var(--shadow);
 }
 
 .points-core {
   width: calc(100% - 28px);
   aspect-ratio: 1;
-  border: 8px solid rgba(255, 255, 255, 0.9);
+  border: 8px solid rgba(255, 255, 255, 0.08);
   border-radius: inherit;
   display: grid;
   place-items: center;
@@ -137,8 +139,9 @@ h2 {
 .panel {
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 254, 250, 0.94);
+  background: rgba(23, 29, 34, 0.88);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
 }
 
 .reward {
@@ -150,14 +153,14 @@ h2 {
 
 .reward.good {
   border-color: rgba(31, 138, 95, 0.28);
-  background: linear-gradient(135deg, var(--green-soft), #fffefa);
-  color: #14583e;
+  background: linear-gradient(135deg, var(--green-soft), rgba(23, 29, 34, 0.96));
+  color: #c9ffe0;
 }
 
 .reward.danger {
   border-color: rgba(180, 77, 66, 0.34);
   background: var(--red-soft);
-  color: #823326;
+  color: #ffd8d3;
 }
 
 .score-grid {
@@ -204,7 +207,7 @@ h2 {
   height: 14px;
   overflow: hidden;
   border-radius: 999px;
-  background: #dfe4dc;
+  background: #293238;
 }
 
 .meter div {
@@ -263,7 +266,7 @@ h2 {
   border-left: 5px solid var(--red);
   border-radius: 8px;
   padding: 13px 13px 13px 12px;
-  background: #fff;
+  background: var(--panel-strong);
 }
 
 .history-item strong {
