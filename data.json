@@ -4,8 +4,26 @@
   "remainingSchoolDays": 17,
   "periodsPerDay": 4,
   "reward": "un nouveau téléphone iPhone",
-  "lastUpdated": "2026-06-03",
+  "lastUpdated": "2026-06-04",
   "losses": [
+    {
+      "date": "2026-06-04",
+      "reason": "Point retiré",
+      "note": "",
+      "createdAt": 1780574400000
+    },
+    {
+      "date": "2026-06-04",
+      "reason": "Point retiré",
+      "note": "",
+      "createdAt": 1780574401000
+    },
+    {
+      "date": "2026-06-04",
+      "reason": "Point retiré",
+      "note": "",
+      "createdAt": 1780574402000
+    },
     {
       "date": "2026-06-03",
       "reason": "Point retiré",
